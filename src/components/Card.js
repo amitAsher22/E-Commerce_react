@@ -19,7 +19,7 @@ function Card({ img, title, info, id, price, rating, addToCart }) {
           activeColor="red"
         />
         <span>{info}</span>
-        <p>{price}</p>
+        <p>{price}$</p>
       </div>
       <div className="buttonTwoButtons">
         <button

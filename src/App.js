@@ -35,6 +35,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navbar data={newArray} />
+        <h1 className="titleShop">AmitTech Shop</h1>
         <Routes>
           <Route element={<Home addToCart={addToCart} />} path="/" />
           <Route element={<CardId />} path="/card/:id" />

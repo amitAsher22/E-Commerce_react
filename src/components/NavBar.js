@@ -21,7 +21,7 @@ function NavBar({ data }) {
   return (
     <div className="navbar">
       <Link className="logoNavbar" to={"/"}>
-        LOGO{" "}
+        Shop
       </Link>
       <div>
         {data.length}
