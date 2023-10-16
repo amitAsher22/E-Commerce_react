@@ -34,36 +34,38 @@ function NavBar({ data }) {
         />
         {toggle ? (
           <div className="popup">
-            <div className="upToggle">
-              <h1>prodocts shop</h1>
+            <div className="containerPop">
+              <div className="upToggle">
+                <h1>prodocts shop</h1>
 
-              <div
-                onClick={() => {
-                  setToggle(!toggle);
-                }}
-              >
-                <span className="closeNavbar">X</span>
+                <div
+                  onClick={() => {
+                    setToggle(!toggle);
+                  }}
+                >
+                  <span className="closeNavbar">X</span>
+                </div>
               </div>
-            </div>
-            <div className="downToggle">
-              {data.length !== 0 ? (
-                <p>
-                  {data.map((item, index) => {
-                    return (
-                      <>
-                        <PopUpProduct
-                          item={item}
-                          key={index}
-                          setSumNumber={setSumNumber}
-                        />
-                      </>
-                    );
-                  })}
-                </p>
-              ) : (
-                <span>empty</span>
-              )}
-              <div className="amount">Amount : {sumNumber}</div>
+              <div className="downToggle">
+                {data.length !== 0 ? (
+                  <p>
+                    {data.map((item, index) => {
+                      return (
+                        <>
+                          <PopUpProduct
+                            item={item}
+                            key={index}
+                            setSumNumber={setSumNumber}
+                          />
+                        </>
+                      );
+                    })}
+                  </p>
+                ) : (
+                  <span>empty</span>
+                )}
+                <div className="amount">Total purchase {sumNumber}$</div>
+              </div>
             </div>
           </div>
         ) : null}

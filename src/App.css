@@ -121,7 +121,7 @@
 
 
   z-index: 999;
-  background-color: rgba(69, 69, 69, 0.677);
+  background-color: rgba(41, 41, 41, 0.718);
   text-align: center;
   padding: 1rem;
   width: 50%;
@@ -131,8 +131,9 @@
 }
 
 .closeNavbar {
-  font-size: 1.8rem;
-  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(210, 239, 22);
 }
 
 .closeNavbar:hover {
@@ -241,6 +242,8 @@ img {
 
 .amount {
   font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff
 }
 
 .groupBtns {
@@ -259,4 +262,43 @@ img {
   font-size: 3rem;
   font-weight: bolder;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+
+@media screen and (max-width: 992px) {
+
+
+  .popup {
+    position: absolute;
+    width: 70%;
+
+  }
+
+  .containerPop {
+    position: relative;
+
+  }
+
+  .imgPopUp {
+    width: 50%;
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .insideDivNavbar {
+    display: flex;
+    padding: 0px;
+  }
+
+  .titleNavbar {
+    size: 40%;
+  }
+
+
+
+
+
 }
