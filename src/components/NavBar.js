@@ -6,9 +6,13 @@ import PopUpProduct from "./PopUpProduct";
 
 import "reactjs-popup/dist/index.css";
 
-function NavBar({ data }) {
+import { MdDarkMode } from "react-icons/md";
+import { CiDark } from "react-icons/ci";
+
+function NavBar({ data, setTheme }) {
   const [toggle, setToggle] = useState(false);
   const [sumNumber, setSumNumber] = useState(0);
+  const [darkMode, setdarkMode] = useState(false);
 
   useEffect(() => {
     const sum = data
@@ -23,6 +27,21 @@ function NavBar({ data }) {
       <Link className="logoNavbar" to={"/"}>
         Shop
       </Link>
+      <div
+        onClick={() => {
+          setdarkMode(!darkMode);
+        }}
+      >
+        {darkMode ? (
+          <CiDark className="lightDarkBtn" onClick={() => setTheme("dark")} />
+        ) : (
+          <MdDarkMode
+            className="lightDarkBtn"
+            onClick={() => setTheme("light")}
+          />
+        )}
+      </div>
+
       <div>
         {data.length}
         <AiFillShopping

@@ -4,11 +4,15 @@ import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/NavBar";
 import dataProjects from "./data/ItemsData";
-import { useState, useEffect } from "react";
+import { useState, useEffect, createContext } from "react";
+
+export const TheamContext = createContext(null);
 
 function App() {
   const [data, setData] = useState([]);
   const [newArray, setNewArray] = useState([]);
+
+  const [theme, setTheme] = useState("dark");
 
   const addToCart = (id) => {
     const itemsAfterFilter = data.filter((item) => item.id === id);
@@ -32,16 +36,18 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Navbar data={newArray} />
-        <h1 className="titleShop">AmitTech Shop</h1>
-        <Routes>
-          <Route element={<Home addToCart={addToCart} />} path="/" />
-          <Route element={<CardId />} path="/card/:id" />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <TheamContext.Provider value={{ theme }}>
+      <div className="App" id={theme}>
+        <BrowserRouter>
+          <Navbar data={newArray} setTheme={setTheme} />
+          <h1 className="titleShop">AmitTech Shop</h1>
+          <Routes>
+            <Route element={<Home addToCart={addToCart} />} path="/" />
+            <Route element={<CardId />} path="/card/:id" />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </TheamContext.Provider>
   );
 }
 

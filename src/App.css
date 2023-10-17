@@ -264,6 +264,18 @@ img {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
+.lightDarkBtn {
+  font-size: 2rem;
+}
+
+#light {
+  background-color: white;
+}
+
+#dark {
+  background-color: black;
+}
+
 
 @media screen and (max-width: 992px) {
 
