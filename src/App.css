@@ -170,7 +170,8 @@
 .cardPopUp {
 
   display: flex;
-  place-items: center;
+  /* place-items: center; */
+
   margin: 1rem 0px;
   padding: 1rem 0.5rem;
   background-color: rgb(255, 255, 255);
@@ -193,7 +194,7 @@
 
 .titleNavbar {
   font-weight: 200;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .mainDeviceId {
@@ -309,8 +310,24 @@ img {
     size: 40%;
   }
 
+  .groupBtns {
+    display: flex;
+    flex-direction: column;
+  }
 
 
+  .mainDeviceId {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+  }
 
+  .mainDeviceId .left {
+    width: 100%;
+  }
 
 }
