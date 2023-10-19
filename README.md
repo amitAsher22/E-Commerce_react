@@ -13,6 +13,8 @@ let's see what react js actually is And I used :
 - CSS High Level
 - Responsive Web Design
 - react-icons
+- react-router-dom
+- react-icons
 
 ## Setup
 
