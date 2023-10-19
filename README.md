@@ -15,6 +15,7 @@ let's see what react js actually is And I used :
 - react-icons
 - react-router-dom
 - react-icons
+- react-hooks
 
 ## Setup
 
